@@ -1,0 +1,33 @@
+@import '../../styles.scss';
+
+$spacing: 1vw; 
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background: url('../../assets/background-green4-1.png') repeat;
+    height: 96vh;
+    padding: $spacing;
+}
+
+@mixin feature-panel {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: black;
+    border-color: $green4;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.screen {
+    @include feature-panel;
+    width: 70%;
+}
+
+.chat {
+    @include feature-panel;
+    width: 30%;
+    margin-left: $spacing;
+}
