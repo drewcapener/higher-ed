@@ -1,12 +1,12 @@
 <div class="container">
-    <video class="video" #video>
+    <video class="video" #video (click)="toggleVideo()">
         <source src="../../assets/demo.mp4" type="video/mp4"/>
     </video>
     <div class="controls">
         <div class="progress-bar" id="pBar" #progressBar></div>
         <button class="play-pause">
-            <img *ngIf="video.paused" class="button-image" (click)="playVideo()" src="../../assets/play-button.png">
-            <img *ngIf="!video.paused" class="button-image" (click)="pauseVideo()" src="../../assets/pause-button.png">
+            <img *ngIf="video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/play-button.png">
+            <img *ngIf="!video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/pause-button.png">
         </button>
     </div>
 </div>
