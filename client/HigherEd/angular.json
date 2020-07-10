@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HigherEd"
+    }
+  },
+  "defaultProject": "HigherEd",
+  "cli": {
+    "analytics": "b5fde662-7615-42ed-9508-86e3421d39a2"
+  }
 }
