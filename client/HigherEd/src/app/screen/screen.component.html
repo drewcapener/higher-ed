@@ -3,12 +3,10 @@
         <source src="../../assets/demo.mp4" type="video/mp4"/>
     </video>
     <div class="controls">
-        <button *ngIf="video.paused" class="play-pause" (click)="playVideo()">
-            <img class="button-image" src="../../assets/play-button.png">
+        <div class="progress-bar" id="pBar" #progressBar></div>
+        <button class="play-pause">
+            <img *ngIf="video.paused" class="button-image" (click)="playVideo()" src="../../assets/play-button.png">
+            <img *ngIf="!video.paused" class="button-image" (click)="pauseVideo()" src="../../assets/pause-button.png">
         </button>
-        <button *ngIf="!video.paused" class="play-pause" (click)="pauseVideo()">
-            <img class="button-image" src="../../assets/pause-button.png">
-        </button>
-        <div class="progress-bar"></div>
     </div>
 </div>

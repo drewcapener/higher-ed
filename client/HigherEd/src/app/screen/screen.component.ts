@@ -7,11 +7,18 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class ScreenComponent implements OnInit {
 
-  @ViewChild('video', {static: true }) video: ElementRef;
+  @ViewChild('video', { static: true }) video: ElementRef;
+  @ViewChild('progressBar', { static: true }) progressBar: ElementRef;
 
-  constructor() { }
+  constructor() { }  
 
   ngOnInit(): void {
+    this.video.nativeElement.addEventListener('timeupdate', function() {
+      var video = document.querySelector('video');
+      var progressBar = document.getElementById('pBar');
+      var currPos = video.currentTime / video.duration;
+      progressBar.style.width = currPos * 100 + '%';
+    })
   }
 
   playVideo() {

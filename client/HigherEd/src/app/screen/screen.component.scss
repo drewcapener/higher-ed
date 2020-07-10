@@ -22,26 +22,32 @@
     position: absolute;
     bottom: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     background-color: $green5;
     border-radius: 0 0 $corner-radius $corner-radius;
 }
 
 .play-pause {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     background: none;
     border: 0;
     outline: 0;
-    background-color: $accent1;
 }
 
 .button-image {
-    margin: 0.25vw;
-    height: $spacing;
+    height: 0;
 }
 
 .progress-bar {
-    width: 50%;
-    height: $spacing;
+    width: 0%;
+    height: 0.2vw;
     background-color: $accent1;
+}
+
+.container:hover .button-image {
+    margin: 0.25vw;
+    height: $spacing;
 }
