@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //background-color: white;//fixme
+    width: 100%;
+    height: 100%;
+    border-radius: $corner-radius;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: $corner-radius $corner-radius 0 0;
+}
+
+// .controls {
+//     position: absolute;
+//     z-index: 2;
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     height: 5%;
+//     background-color: pink;
+//     border-radius: 0 0 $corner-radius $corner-radius;
+// }
