@@ -18,8 +18,15 @@
 .search-bar {
     display: none;
     margin: 0.5vh;
-    border-radius: $corner-radius - 1px;
     font-family: $roboto;
+    font-size: 2vh;
+    background-color: $green5;
+    color: white;
+    border: none;
+}
+
+.search-bar:focus {
+    outline: none;
 }
 
 .label {
