@@ -10,10 +10,16 @@
     font-family: $roboto;
     font-size: 2vh;
     border-radius: $corner-radius - 2px $corner-radius - 2px 0 0;
+    border-style: solid;
+    border-color: $accent1;
+    border-width: 2px;
 }
 
 .search-bar {
     display: none;
+    margin: 0.5vh;
+    border-radius: $corner-radius - 1px;
+    font-family: $roboto;
 }
 
 .label {
@@ -24,6 +30,4 @@
 
 .container:hover .search-bar {
     display: inline;
-    margin: 0.5vh;
-    border-radius: $corner-radius - 1px;
 }

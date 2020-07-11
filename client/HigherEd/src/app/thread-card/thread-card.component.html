@@ -1,12 +1,18 @@
 <div class="container">
     <div class="message">
-        This is a thread!
-        This is a thread!
-        This is a thread!
-        This is a thread!
-        This is a thread!
-        This is a thread!
-        This is a thread!
-        This is a thread!
+        <span class="sender">{{ primaryMessage.sender }}</span>
+        {{ primaryMessage.message }}
+        <span *ngIf="!showSecondary" class="see-more-less" (click)="showSecondary = !showSecondary;">
+            ...See More
+        </span>
+        <div *ngIf="showSecondary" class="secondary-messages">
+            <div *ngFor="let secMessage of secondaryMessages" class="secondary-message">
+                <span class="sender">{{ secMessage.sender }}</span>
+                {{ secMessage.message }}
+            </div>
+        </div>
+        <div *ngIf="showSecondary" class="see-more-less" (click)="showSecondary = !showSecondary;">
+            ...Show Less
+        </div>
     </div>
 </div>

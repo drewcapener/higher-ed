@@ -9,11 +9,17 @@
     margin-top: 0.5vh;
     font-family: $roboto;
     font-size: 2vh;
+    border-style: solid;
+    border-color: $accent1;
+    border-width: 2px;
     border-radius: 0 0 $corner-radius - 2px $corner-radius - 2px;
 }
 
 .input {
     display: none;
+    margin: 0.5vh;
+    border-radius: $corner-radius - 1px;
+    font-family: $roboto;
 }
 
 .label {
@@ -24,6 +30,4 @@
 
 .container:hover .input {
     display: inline;
-    margin: 0.5vh;
-    border-radius: $corner-radius - 1px;
 }

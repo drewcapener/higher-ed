@@ -9,9 +9,28 @@
     margin-top: 0.5vh;
     font-family: $roboto;
     font-size: 2vh;
+    border-style: solid;
+    border-color: $accent1;
+    border-width: 2px;
 }
 
 .message {
     margin: 0.5vh;
     color: white;
+}
+
+.see-more-less {
+    font-weight: bold;
+    cursor: default;
+    color: white;
+    margin-left: 0.5vh;
+}
+
+.secondary-message {
+    margin: 0.5vh;
+    color: white;
+}
+
+.sender {
+    font-weight: bold;
 }
