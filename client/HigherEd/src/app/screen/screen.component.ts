@@ -29,9 +29,9 @@ export class ScreenComponent implements OnInit {
     }
   }
 
-  @HostListener('window:keydown', ['$event'])
-    spaceEvent(event: any) {
-        this.toggleVideo();
-    }
+  // @HostListener('window:keydown', ['$event'])
+  //   spaceEvent(event: any) {
+  //       this.toggleVideo();
+  //   }
 
 }

@@ -3,10 +3,15 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: $green5;
     width: 100%;
     margin-bottom: 0.5vh;
     margin-top: 0.5vh;
     font-family: $roboto;
     font-size: 2vh;
+}
+
+.message {
+    margin: 0.5vh;
+    color: white;
 }
