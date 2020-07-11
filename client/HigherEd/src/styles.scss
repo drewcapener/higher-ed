@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $green1: #26452B;
 $green2: #355C2E;
 $green3: #3E5229;
@@ -8,6 +10,8 @@ $accent1: #73D183;
 $corner-radius: 5px;
 
 $spacing: 1vw;
+
+$roboto: 'Roboto', sans-serif;
 
 body {
     margin: 0;

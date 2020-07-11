@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { LectureTheatreComponent } from './lecture-theatre/lecture-theatre.component';
 import { ChatComponent } from './chat/chat.component';
 import { ScreenComponent } from './screen/screen.component';
+import { ThreadCardComponent } from './thread-card/thread-card.component';
+import { SearchChatComponent } from './search-chat/search-chat.component';
+import { NewThreadComponent } from './new-thread/new-thread.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LectureTheatreComponent,
     ChatComponent,
-    ScreenComponent
+    ScreenComponent,
+    ThreadCardComponent,
+    SearchChatComponent,
+    NewThreadComponent
   ],
   imports: [
     BrowserModule,

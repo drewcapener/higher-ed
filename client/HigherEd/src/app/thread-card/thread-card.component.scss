@@ -1,0 +1,12 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 0.5vh;
+    margin-top: 0.5vh;
+    font-family: $roboto;
+    font-size: 2vh;
+}
