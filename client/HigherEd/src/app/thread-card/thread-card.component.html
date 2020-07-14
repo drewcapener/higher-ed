@@ -11,7 +11,7 @@
                 {{ secMessage.message }}
             </div>
         </div>
-        <div *ngIf="showSecondary" class="input" contenteditable="true" (keyup.enter)="onSubmit(input.innerText)" #input></div>
+        <div class="input" contenteditable="true" (keyup.enter)="onSubmit(input.innerText)" #input></div>
         <div *ngIf="showSecondary" class="see-more-less" (click)="showSecondary = false;">
             ...
         </div>
