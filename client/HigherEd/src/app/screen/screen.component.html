@@ -1,5 +1,5 @@
-<div class="container">
-    <video class="video" #video (click)="toggleVideo()">
+<div class="container"(keydown.Space)="toggleVideo()">
+    <video class="video" #video (click)="toggleVideo()" (keydown.Space)="toggleVideo()">
         <source src="../../assets/demo.mp4" type="video/mp4"/>
     </video>
     <div class="controls">

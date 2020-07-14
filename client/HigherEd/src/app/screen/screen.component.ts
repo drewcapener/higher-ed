@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-screen',
@@ -28,10 +28,5 @@ export class ScreenComponent implements OnInit {
       this.video.nativeElement.pause();
     }
   }
-
-  // @HostListener('window:keydown', ['$event'])
-  //   spaceEvent(event: any) {
-  //       this.toggleVideo();
-  //   }
 
 }
