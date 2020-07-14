@@ -42,3 +42,16 @@
 .sender {
     font-weight: bold;
 }
+
+.input {
+    margin-left: 0.5vh;
+    background-color: $green5;
+    color: white;
+    border: none;
+    height: auto;
+    width: 90%;
+}
+
+.input:focus {
+    outline: none;
+}

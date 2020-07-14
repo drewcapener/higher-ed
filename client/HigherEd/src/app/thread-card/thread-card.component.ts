@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Message } from '../../models/message';
 import { Thread } from 'src/models/thread';
 
@@ -8,6 +8,14 @@ import { Thread } from 'src/models/thread';
   styleUrls: ['./thread-card.component.scss']
 })
 export class ThreadCardComponent implements OnInit {
+
+  input: ElementRef;
+
+  @ViewChild('input') set content(content: ElementRef) {
+    if (content) {
+      this.input = content;
+    }
+  }
 
   @Input() thread: Thread;
   showSecondary: boolean;
@@ -21,6 +29,11 @@ export class ThreadCardComponent implements OnInit {
     if (this.thread.secondaryMessages) {
       this.hasSecondary = true;
     }
+  }
+
+  onSubmit(newMessage: string): void {
+    this.thread.secondaryMessages.push(new Message('Drew', null, newMessage));
+    this.input.nativeElement.innerText = '';
   }
 
 }
