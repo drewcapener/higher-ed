@@ -11,12 +11,16 @@ export class ThreadCardComponent implements OnInit {
 
   @Input() thread: Thread;
   showSecondary: boolean;
+  hasSecondary: boolean;
 
   constructor() {
     this.showSecondary = false;
   }
 
   ngOnInit(): void {
+    if (this.thread.secondaryMessages) {
+      this.hasSecondary = true;
+    }
   }
 
 }
