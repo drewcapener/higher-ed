@@ -9,6 +9,7 @@ import { ScreenComponent } from './screen/screen.component';
 import { ThreadCardComponent } from './thread-card/thread-card.component';
 import { SearchChatComponent } from './search-chat/search-chat.component';
 import { NewThreadComponent } from './new-thread/new-thread.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewThreadComponent } from './new-thread/new-thread.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

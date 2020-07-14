@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Message } from '../../models/message';
 import { Thread } from 'src/models/thread';
 
@@ -9,15 +9,10 @@ import { Thread } from 'src/models/thread';
 })
 export class ThreadCardComponent implements OnInit {
 
-  thread: Thread;
+  @Input() thread: Thread;
   showSecondary: boolean;
 
   constructor() {
-    let primaryMessage = new Message('Drew', null, 'Hey Julia!');
-    let secondaryMessages = [];
-    secondaryMessages.push(new Message('Julia', null, 'How are you?'));
-    secondaryMessages.push(new Message('Drew', null, 'Pretty Good.'));
-    this.thread = new Thread(primaryMessage, secondaryMessages);
     this.showSecondary = false;
   }
 

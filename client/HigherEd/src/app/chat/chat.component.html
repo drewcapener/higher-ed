@@ -1,6 +1,7 @@
 <div class="container">
     <app-search-chat class="search-chat"></app-search-chat>
-    <app-thread-card class="thread-card"></app-thread-card>
-    <app-thread-card class="thread-card"></app-thread-card>
-    <app-new-thread class="new-thread"></app-new-thread>
+    <div *ngFor="let thread of threads" class="thread-container">
+        <app-thread-card class="thread-card" [thread]="thread"></app-thread-card>
+    </div>
+    <app-new-thread class="new-thread" [threads]="threads" (threadEmitter)="onThreadEmit($event)"></app-new-thread>
 </div>

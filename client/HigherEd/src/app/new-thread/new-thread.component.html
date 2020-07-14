@@ -1,4 +1,4 @@
-<div class="container">
-    <input class="input" type="text" placeholder="press enter to send">
+<div class="container" (keyup.enter)="onSubmit()">
+    <input class="input" type="text" placeholder="press enter to send" [(ngModel)]="newMessage">
     <div class="label">Start a new thread.</div>
 </div>

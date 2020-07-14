@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
+import { Thread } from 'src/models/thread';
+import { Message } from 'src/models/message';
 
 @Component({
   selector: 'app-new-thread',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewThreadComponent implements OnInit {
 
-  constructor() { }
+  newMessage: string;
+  @Input() threads: Thread[]
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    this.threads.push(new Thread(new Message('Drew', null, this.newMessage), null))
+    this.newMessage = '';
   }
 
 }
