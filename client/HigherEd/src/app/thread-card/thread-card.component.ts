@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../../models/message';
+import { Thread } from 'src/models/thread';
 
 @Component({
   selector: 'app-thread-card',
@@ -8,15 +9,15 @@ import { Message } from '../../models/message';
 })
 export class ThreadCardComponent implements OnInit {
 
-  primaryMessage: Message;
-  secondaryMessages: Message[];
+  thread: Thread;
   showSecondary: boolean;
 
   constructor() {
-    this.primaryMessage = new Message('Drew', null, 'Hey Julia!');
-    this.secondaryMessages = [];
-    this.secondaryMessages.push(new Message('Julia', null, 'How are you?'));
-    this.secondaryMessages.push(new Message('Drew', null, 'Pretty Good.'));
+    let primaryMessage = new Message('Drew', null, 'Hey Julia!');
+    let secondaryMessages = [];
+    secondaryMessages.push(new Message('Julia', null, 'How are you?'));
+    secondaryMessages.push(new Message('Drew', null, 'Pretty Good.'));
+    this.thread = new Thread(primaryMessage, secondaryMessages);
     this.showSecondary = false;
   }
 
