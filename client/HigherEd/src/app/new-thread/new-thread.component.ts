@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, OnChanges, ViewChild, ElementRef } from '@angular/core';
 import { Thread } from 'src/models/thread';
 import { Message } from 'src/models/message';
 
@@ -9,7 +9,8 @@ import { Message } from 'src/models/message';
 })
 export class NewThreadComponent implements OnInit {
 
-  newMessage: string;
+  @ViewChild('input', {static: true}) input: ElementRef;
+
   @Input() threads: Thread[]
 
   constructor() {
@@ -18,9 +19,9 @@ export class NewThreadComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
-    this.threads.push(new Thread(new Message('Drew', null, this.newMessage), null))
-    this.newMessage = '';
+  onSubmit(newMessage: string): void {
+    this.threads.push(new Thread(new Message('Drew', null, newMessage), null))
+    this.input.nativeElement.innerText = '';
   }
 
 }

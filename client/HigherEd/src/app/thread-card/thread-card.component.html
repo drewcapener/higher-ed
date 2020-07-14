@@ -2,8 +2,8 @@
     <div class="message">
         <span class="sender">{{ thread.primaryMessage.sender }}</span>
         {{ thread.primaryMessage.message }}
-        <span *ngIf="!showSecondary && hasSecondary" class="see-more-less" (click)="showSecondary = !showSecondary;">
-            ...See More
+        <span *ngIf="!showSecondary && hasSecondary" class="see-more-less" (click)="showSecondary = true;">
+            ...
         </span>
         <div *ngIf="showSecondary" class="secondary-messages">
             <div *ngFor="let secMessage of thread.secondaryMessages" class="secondary-message">
@@ -11,7 +11,7 @@
                 {{ secMessage.message }}
             </div>
         </div>
-        <div *ngIf="showSecondary" class="see-more-less" (click)="showSecondary = !showSecondary;">
+        <div *ngIf="showSecondary" class="see-more-less" (click)="showSecondary = false;">
             ...Show Less
         </div>
     </div>
