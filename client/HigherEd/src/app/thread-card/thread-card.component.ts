@@ -33,6 +33,7 @@ export class ThreadCardComponent implements OnInit {
 
   onSubmit(newMessage: string): void {
     this.thread.secondaryMessages.push(new Message('Drew', null, newMessage));
+    this.hasSecondary = true;
     this.input.nativeElement.innerText = '';
   }
 

@@ -20,7 +20,7 @@ export class NewThreadComponent implements OnInit {
   }
 
   onSubmit(newMessage: string): void {
-    this.threads.push(new Thread(new Message('Drew', null, newMessage), null))
+    this.threads.push(new Thread(new Message('Drew', null, newMessage), []))
     this.input.nativeElement.innerText = '';
   }
 
