@@ -38,8 +38,9 @@
 }
 
 .button-image {
-    height: 0;
-    color: white;
+    display: none;
+    height: 2vh;
+    margin: 0.5vw;
 }
 
 .progress-bar {
@@ -49,8 +50,7 @@
 }
 
 .container:hover .button-image {
-    margin: 0.5vw;
-    height: 2vh;
+    display: inline;
 }
 
 .fullscreen {
@@ -60,12 +60,45 @@
     background: none;
     border: 0;
     outline: 0;
-    margin-left: auto;
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
+}
+
+.volume {
+    display: none;
+    margin-left: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1vh;
+    background: $accent1;
+    outline: none;
+    border-radius: $corner-radius;
+}
+
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2vh;
+    height: 2vh;
+    background: $accent1;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.25vh;
+    border-radius: $corner-radius;
+  }
+  
+  .volume::-moz-range-thumb {
+    width: 2vh;
+    height: 2vh;
+    background: $green5;
+  }
+
+.container:hover .volume {
+    display: inline;
 }
