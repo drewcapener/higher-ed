@@ -2,7 +2,7 @@
     <div class="message">
         <span class="sender">{{ thread.primaryMessage.sender }}</span>
         {{ thread.primaryMessage.message }}
-        <span *ngIf="!showSecondary && hasSecondary" class="see-more-less" (click)="showSecondary = true;">
+        <span *ngIf="!showSecondary" class="see-more-less" (click)="showSecondary = true;">
             ...
         </span>
         <div *ngIf="showSecondary" class="secondary-messages">
@@ -11,7 +11,7 @@
                 {{ secMessage.message }}
             </div>
         </div>
-        <div class="input" contenteditable="true" (keyup.enter)="onSubmit(input.innerText)" #input></div>
+        <div *ngIf="showSecondary" class="input" contenteditable="true" (keyup.enter)="onSubmit(input.innerText)" #input></div>
         <div *ngIf="showSecondary" class="see-more-less" (click)="showSecondary = false;">
             ...
         </div>
