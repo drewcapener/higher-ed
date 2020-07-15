@@ -17,7 +17,6 @@ export class ChatComponent implements OnInit {
     secondaryMessages.push(new Message('Julia', null, 'How are you?'));
     secondaryMessages.push(new Message('Drew', null, 'Pretty Good.'));
     this.threads = [
-      new Thread(primaryMessage, secondaryMessages),
       new Thread(primaryMessage, secondaryMessages)
     ];
   }
