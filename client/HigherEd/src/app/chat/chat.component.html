@@ -3,5 +3,5 @@
     <div *ngFor="let thread of threads" class="thread-container">
         <app-thread-card class="thread-card" [thread]="thread"></app-thread-card>
     </div>
-    <app-new-thread class="new-thread" [threads]="threads" (threadEmitter)="onThreadEmit($event)"></app-new-thread>
+    <app-new-thread class="new-thread" [threads]="threads"></app-new-thread>
 </div>

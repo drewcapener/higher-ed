@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Thread } from 'src/models/thread';
 import { Message } from 'src/models/message';
 
@@ -22,10 +22,6 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  onThreadEmit(thread: Thread): void {
-    this.threads.push(thread);
   }
 
 }
