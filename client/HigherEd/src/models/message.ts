@@ -1,13 +1,13 @@
 export class Message {
     
     sender: string;
-    date: Date;
+    time: number;
     message: string;
 
     constructor(sender: string,
-        date: Date, message: string) {
+        time: number, message: string) {
             this.sender = sender;
-            this.date = date;
+            this.time = time;
             this.message = message;
     }
 }
