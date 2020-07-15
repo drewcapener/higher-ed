@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class VideoTimeService {
 
-  currentTime: number = 100.235678
+  currentTime: number = 0;
 
   setTime(time: number): void {
     this.currentTime = time;

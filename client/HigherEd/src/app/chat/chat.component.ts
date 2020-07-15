@@ -12,13 +12,7 @@ export class ChatComponent implements OnInit {
   threads: Thread[];
 
   constructor() {
-    let primaryMessage = new Message('Drew', 134.234567, 'Hey Julia!');
-    let secondaryMessages = [];
-    secondaryMessages.push(new Message('Julia', 157.234567, 'How are you?'));
-    secondaryMessages.push(new Message('Drew', 224.234567, 'Pretty Good.'));
-    this.threads = [
-      new Thread(primaryMessage, secondaryMessages)
-    ];
+    this.threads = [];
   }
 
   ngOnInit(): void {

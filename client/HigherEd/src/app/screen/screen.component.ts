@@ -14,10 +14,11 @@ export class ScreenComponent implements OnInit {
   constructor(private videoTimeService: VideoTimeService) { }  
 
   ngOnInit(): void {
-    this.video.nativeElement.addEventListener('timeupdate', this.videoSetup.bind(this), false);
+    this.video.nativeElement.addEventListener('timeupdate', this.timeUpdate.bind(this), false);
   }
 
-  videoSetup(): void {
+  timeUpdate(): void {
+      this.videoTimeService.setTime(this.video.nativeElement.currentTime);
       var currPos = this.video.nativeElement.currentTime / this.video.nativeElement.duration;
       this.progressBar.nativeElement.style.width = currPos * 100 + '%';
   }

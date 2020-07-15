@@ -21,7 +21,7 @@ export class NewThreadComponent implements OnInit {
   }
 
   onSubmit(newMessage: string): void {
-    this.threads.push(new Thread(new Message('Drew', null, newMessage), []))
+    this.threads.push(new Thread(new Message('Drew', this.videoTimeService.getTime(), newMessage), []))
     this.input.nativeElement.innerText = '';
   }
 
