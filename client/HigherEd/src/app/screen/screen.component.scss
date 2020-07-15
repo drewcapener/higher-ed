@@ -52,3 +52,20 @@
     margin: 0.5vw;
     height: 2vh;
 }
+
+.fullscreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: none;
+    border: 0;
+    outline: 0;
+    margin-left: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}

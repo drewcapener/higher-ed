@@ -29,4 +29,19 @@ export class ScreenComponent implements OnInit {
     }
   }
 
+  goFullScreen() {
+    if (this.video.nativeElement.requestFullscreen) {
+      this.video.nativeElement.requestFullscreen();
+    }
+    if (this.video.nativeElement.webkitRequestFullscreen) {
+      this.video.nativeElement.webkitRequestFullscreen();
+    }
+    if (this.video.nativeElement.mozRequestFullScreen) {
+      this.video.nativeElement.mozRequestFullScreen();
+    }
+    if (this.video.nativeElement.msRequestFullscreen) {
+      this.video.nativeElement.msRequestFullscreen();
+    }
+  }
+
 }

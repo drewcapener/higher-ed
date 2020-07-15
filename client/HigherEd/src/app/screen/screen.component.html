@@ -4,9 +4,14 @@
     </video>
     <div class="controls">
         <div class="progress-bar" id="pBar" #progressBar></div>
-        <button class="play-pause">
-            <img *ngIf="video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/play-button.png">
-            <img *ngIf="!video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/pause-button.png">
-        </button>
+        <div class="buttons">
+            <button class="play-pause">
+                <img *ngIf="video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/play-button.png">
+                <img *ngIf="!video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/pause-button.png">
+            </button>
+            <button class="fullscreen">
+                <img class="button-image" (click)="goFullScreen()" src="../../assets/fullscreen.png">
+            </button>
+        </div>
     </div>
 </div>
