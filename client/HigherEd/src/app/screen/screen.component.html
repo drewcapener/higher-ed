@@ -9,7 +9,7 @@
                 <img *ngIf="video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/play-button.png">
                 <img *ngIf="!video.paused" class="button-image" (click)="toggleVideo()" src="../../assets/pause-button.png">
             </button>
-            <input class="volume" type="range" min="0.0" max="1.0">
+            <input class="volume" type="range" min="0.0" max="1.0" step="0.05" value="0.5" #volume (change)="onVolumeChange(volume.value)">
             <button class="fullscreen">
                 <img class="button-image" (click)="goFullScreen()" src="../../assets/fullscreen.png">
             </button>

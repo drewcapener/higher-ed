@@ -76,7 +76,7 @@
     -webkit-appearance: none;
     appearance: none;
     height: 1vh;
-    background: $accent1;
+    background: black;
     outline: none;
     border-radius: $corner-radius;
 }
@@ -86,10 +86,10 @@
     appearance: none;
     width: 2vh;
     height: 2vh;
-    background: $accent1;
-    border-style: solid;
-    border-color: black;
-    border-width: 0.25vh;
+    background: black;
+    // border-style: solid;
+    // border-color: black;
+    // border-width: 0.25vh;
     border-radius: $corner-radius;
   }
   

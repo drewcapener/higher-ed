@@ -44,4 +44,8 @@ export class ScreenComponent implements OnInit {
     }
   }
 
+  onVolumeChange(value: number): void {
+    this.video.nativeElement.volume = value;
+  }
+
 }
