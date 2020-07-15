@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter, Input } from '@angular/core';
+import { VideoTimeService } from '../video-time.service';
 
 @Component({
   selector: 'app-screen',
@@ -10,15 +11,15 @@ export class ScreenComponent implements OnInit {
   @ViewChild('video', { static: true }) video: ElementRef;
   @ViewChild('progressBar', { static: true }) progressBar: ElementRef;
 
-  constructor() { }  
+  constructor(private videoTimeService: VideoTimeService) { }  
 
   ngOnInit(): void {
-    this.video.nativeElement.addEventListener('timeupdate', function() {
-      var video = document.querySelector('video');
-      var progressBar = document.getElementById('pBar');
-      var currPos = video.currentTime / video.duration;
-      progressBar.style.width = currPos * 100 + '%';
-    })
+    this.video.nativeElement.addEventListener('timeupdate', this.videoSetup.bind(this), false);
+  }
+
+  videoSetup(): void {
+      var currPos = this.video.nativeElement.currentTime / this.video.nativeElement.duration;
+      this.progressBar.nativeElement.style.width = currPos * 100 + '%';
   }
 
   toggleVideo() {
