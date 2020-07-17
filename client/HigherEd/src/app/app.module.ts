@@ -11,6 +11,7 @@ import { SearchChatComponent } from './search-chat/search-chat.component';
 import { NewThreadComponent } from './new-thread/new-thread.component';
 import { FormsModule } from '@angular/forms';
 import { TimeStampPipe } from './time-stamp.pipe';
+import { ClassArchivesComponent } from './class-archives/class-archives.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TimeStampPipe } from './time-stamp.pipe';
     ThreadCardComponent,
     SearchChatComponent,
     NewThreadComponent,
-    TimeStampPipe
+    TimeStampPipe,
+    ClassArchivesComponent
   ],
   imports: [
     BrowserModule,
