@@ -12,9 +12,9 @@ import { NewThreadComponent } from './new-thread/new-thread.component';
 import { FormsModule } from '@angular/forms';
 import { TimeStampPipe } from './time-stamp.pipe';
 import { ClassArchivesComponent } from './class-archives/class-archives.component';
-import { SearchArchivesComponent } from './search-archives/search-archives.component';
 import { ArchiveDocumentsComponent } from './archive-documents/archive-documents.component';
 import { DocumentComponent } from './document/document.component';
+import { ArchiveControlComponent } from './archive-control/archive-control.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,9 @@ import { DocumentComponent } from './document/document.component';
     NewThreadComponent,
     TimeStampPipe,
     ClassArchivesComponent,
-    SearchArchivesComponent,
     ArchiveDocumentsComponent,
-    DocumentComponent
+    DocumentComponent,
+    ArchiveControlComponent
   ],
   imports: [
     BrowserModule,
