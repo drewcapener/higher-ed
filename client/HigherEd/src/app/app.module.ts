@@ -15,6 +15,7 @@ import { ClassArchivesComponent } from './class-archives/class-archives.componen
 import { ArchiveDocumentsComponent } from './archive-documents/archive-documents.component';
 import { DocumentComponent } from './document/document.component';
 import { ArchiveControlComponent } from './archive-control/archive-control.component';
+import { SearchArchiveComponent } from './search-archive/search-archive.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ArchiveControlComponent } from './archive-control/archive-control.compo
     ClassArchivesComponent,
     ArchiveDocumentsComponent,
     DocumentComponent,
-    ArchiveControlComponent
+    ArchiveControlComponent,
+    SearchArchiveComponent
   ],
   imports: [
     BrowserModule,
