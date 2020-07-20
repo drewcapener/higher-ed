@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $green4;
+    height: 96vh;
+    padding: $spacing;
+}
+
+.search {
+    @include feature-panel;
+    height: auto;
+    width: 100%;
+}
+
+.archive {
+    @include feature-panel;
+    height: auto;
+    width: 100%;
+    margin-top: $spacing;
+}
