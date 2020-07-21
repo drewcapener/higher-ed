@@ -1,9 +1,11 @@
+import { ArchiveDocument } from './archive-document';
+
 export class Archive {
     name: string;
-    documents: any[];
+    documents: ArchiveDocument[];
 
     constructor(name: string,
-        documents: any[]) {
+        documents: ArchiveDocument[]) {
             this.name = name;
             this.documents = documents;
     }

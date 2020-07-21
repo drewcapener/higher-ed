@@ -1,0 +1,12 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vh;//fixme
+    height: 15vh;//fixme
+    background-color: white;//fixme
+    margin: $spacing;
+}

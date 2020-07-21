@@ -1,4 +1,4 @@
-export class Document {
+export class ArchiveDocument {
 
     title: string;
     content: any;
