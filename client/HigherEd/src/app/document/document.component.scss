@@ -5,8 +5,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15vh;//fixme
-    height: 15vh;//fixme
-    background-color: white;//fixme
+    // height: 15vh;//fixme
+    width: 15vh;
+    background-color: $green5;//fixme
     margin: $spacing;
+    border-style: solid;
+    border-radius: $corner-radius;
+    border-color: $accent1;
+    border-width: thick;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
 }
