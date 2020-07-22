@@ -1,12 +1,12 @@
 <div class="container">
     <div class="video-container">
         <video class="video" #video>
-            <source src="../../assets/demo.mp4" type="video/mp4"/>
+            <source [src]="document.content" type="video/mp4"/>
         </video>
-        <button class="button">
+        <button class="button" (click)="toTheatre()">
             <img class="button-image" src="../../assets/play-button.png">
         </button>
     </div>
-    <div class="title">This is the Title</div>
-    <div class="description">This is a nice long description to use to test this feature</div>
+    <div class="title">{{ document.title }}</div>
+    <div class="description">{{ document.description }}</div>
 </div>

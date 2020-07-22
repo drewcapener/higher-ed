@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
+import { ArchiveDocument } from 'src/models/archive-document';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-document',
@@ -7,8 +9,15 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class DocumentComponent implements OnInit {
 
-  constructor() { }
+  @Input() document: ArchiveDocument;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {}
+
+  toTheatre(): void {
+    //fixme do something here to store video
+    this.router.navigate(['/lecture-theatre']);
+  }
 
 }
