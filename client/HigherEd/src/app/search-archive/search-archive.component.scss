@@ -3,6 +3,7 @@
 .container {
     flex-direction: row;
     border-radius: $corner-radius - 2px 0 0 $corner-radius - 2px;
+    margin-left: $spacing;
     @include search-container;
 }
 
