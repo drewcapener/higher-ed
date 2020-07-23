@@ -17,6 +17,7 @@ import { DocumentComponent } from './document/document.component';
 import { ArchiveControlComponent } from './archive-control/archive-control.component';
 import { SearchArchiveComponent } from './search-archive/search-archive.component';
 import { LoginComponent } from './login/login.component';
+import { UsernamePasswordComponent } from './username-password/username-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './login/login.component';
     DocumentComponent,
     ArchiveControlComponent,
     SearchArchiveComponent,
-    LoginComponent
+    LoginComponent,
+    UsernamePasswordComponent
   ],
   imports: [
     BrowserModule,

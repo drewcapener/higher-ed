@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $green4;
+    height: 96vh;
+    padding: $spacing;
+}
+
+.usn-pwd {
+    @include feature-panel;
+    height: 50%;
+    width: 30%;
+}
