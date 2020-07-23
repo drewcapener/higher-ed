@@ -1,0 +1,16 @@
+@import '../../styles.scss'; 
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: $green4;
+    height: 96vh;
+    padding: $spacing;
+}
+
+.record-screen {
+    @include feature-panel;
+    height: auto;
+    width: 70%;
+}

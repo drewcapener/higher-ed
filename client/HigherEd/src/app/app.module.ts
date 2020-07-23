@@ -18,6 +18,8 @@ import { ArchiveControlComponent } from './archive-control/archive-control.compo
 import { SearchArchiveComponent } from './search-archive/search-archive.component';
 import { LoginComponent } from './login/login.component';
 import { UsernamePasswordComponent } from './username-password/username-password.component';
+import { LectureStudioComponent } from './lecture-studio/lecture-studio.component';
+import { RecordScreenComponent } from './record-screen/record-screen.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { UsernamePasswordComponent } from './username-password/username-password
     ArchiveControlComponent,
     SearchArchiveComponent,
     LoginComponent,
-    UsernamePasswordComponent
+    UsernamePasswordComponent,
+    LectureStudioComponent,
+    RecordScreenComponent
   ],
   imports: [
     BrowserModule,
