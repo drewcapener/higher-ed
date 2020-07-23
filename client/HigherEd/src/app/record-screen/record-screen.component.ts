@@ -10,6 +10,9 @@ export class RecordScreenComponent implements OnInit {
   @ViewChild('video', { static: true }) video: ElementRef;
 
   recording: boolean;
+  recorder: MediaRecorder;
+  chunks: any[];
+  vidURL: string;
 
   constructor() { }
 
@@ -17,16 +20,30 @@ export class RecordScreenComponent implements OnInit {
     this.recording = false;
   }
 
+  
+
   startStream(): void {
     this.recording = true
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(
       (stream) => {
         this.video.nativeElement.srcObject = stream;
+        this.recorder = new MediaRecorder(stream);
+        this.recorder.start();
+        this.recorder.ondataavailable = (ev) => {
+          this.chunks.push(ev.data);
+        }
+        this.recorder.onstop = (ev) => {
+          let blob = new Blob(this.chunks, { 'type': 'video/mp4;' });
+          this.chunks = [];
+          let videoURL = window.URL.createObjectURL(blob);
+          this.vidURL = videoURL;
+        }
       }
     )
   }
 
   endStream(): void {
+    this.recorder.stop();
     this.recording = false;
     let stream = this.video.nativeElement.srcObject;
     let tracks = stream.getTracks();
