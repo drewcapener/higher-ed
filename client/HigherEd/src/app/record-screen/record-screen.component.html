@@ -1,18 +1,13 @@
 <div class="container">
-    <video class="video" #video>
-        <source src="../../assets/demo.mp4" type="video/mp4"/>
+    <video class="video" autoplay="true" #video>
+        
     </video>
-    <!-- <div class="controls">
-        <div class="progress-bar" id="pBar" #progressBar></div>
+    <div class="controls">
         <div class="buttons">
             <button class="play-pause">
-                <img *ngIf="video.paused" class="button-image" src="../../assets/play-button.png">
-                <img *ngIf="!video.paused" class="button-image" src="../../assets/pause-button.png">
-            </button>
-            <input class="volume" type="range" min="0.0" max="1.0" step="0.05" value="0.5" #volume>
-            <button class="fullscreen">
-                <img class="button-image" src="../../assets/fullscreen.png">
+                <img *ngIf="!recording" class="button-image" src="../../assets/record.png" (click)="startStream()">
+                <img *ngIf="recording" class="button-image" src="../../assets/stop.png" (click)="endStream()">
             </button>
         </div>
-    </div> -->
+    </div>
 </div>
